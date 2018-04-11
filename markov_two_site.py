@@ -9,7 +9,7 @@ def markov_two_site(k):
         assert k==0 or k==1, "k(present site) must be 0 or 1"
         l=1-k
         Upsilon=Pi(l)/Pi(k)
-        if random.choice([0, 1])<Upsilon: k=l
+        if random.uniform(0, 1)<Upsilon: k=l
         return k
 k=1
 for i in range(100):
