@@ -6,10 +6,11 @@ def reject_finite(Pi):
         K=len(Pi)
         while True:
                 k=nran(1, K)
-                Upsilon=random.choice([0, Pi_max])
+                Upsilon=random.uniform(0, Pi_max)
                 if Upsilon<=Pi[k-1]: return k-1
-## Example
+
 Z=[0.005, 0.095, 0.3, 0.5, 0.1]
+print(sum(Z))
 K=len(Z)
 l=[]
 
