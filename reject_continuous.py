@@ -2,7 +2,7 @@ import math as m
 import random
 import numpy as np
 
-def Prob(x): return m.exp(-x**2/2.)/(2*m.pi)
+def Prob(x): return m.exp(-x**2/2.)/m.sqrt(2*m.pi)
 
 def reject_continuous(x_min, x_max):
         X=np.arange(x_min, x_max, 0.01)
