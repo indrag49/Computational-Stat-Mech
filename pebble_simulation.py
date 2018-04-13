@@ -15,12 +15,12 @@ def nran(k, l):
 def Nbr(n, k): return A.T[n-1, k-1]
 
 def markov_discrete_pebble(k):
-        n=random.choice(range(1, 5))
+        n=nran(1, 4)
         if Nbr(n, k)!=0: k=Nbr(n, k)
         return k
 
 FPS=30
-windowwidth=700 # in pixels
+windowwidth=1000 # in pixels
 windowheight=700 # in pixels
 boardwidth=3 # number of columns
 boardheight=3 # number of heights
@@ -41,7 +41,7 @@ black=(0, 0, 0)
 
 DISPLAYSURF=pygame.display.set_mode((windowwidth, windowheight))
 pygame.display.set_caption('Markov-Pebble')
-
+##BASICFONT = pygame.font.Font('freesansbold.ttf', BASICFONTSIZE)
 
 
 background=white
@@ -97,7 +97,7 @@ while True:
         clock.tick(2)
         drawBoard(getBoard(), '')
         textsurface=myfont.render('Throws = '+str(throws), False, black)
-        DISPLAYSURF.blit(textsurface, (280, 150))
+        DISPLAYSURF.blit(textsurface, (440, 150))
         
         k=markov_discrete_pebble(k) # calls the main algorithm
         n=L[k]
@@ -105,3 +105,4 @@ while True:
         pygame.draw.circle(DISPLAYSURF, circle_color, (left + boxsize/2, top + boxsize/2), 30)
         throws+=1
         pygame.display.update()
+
