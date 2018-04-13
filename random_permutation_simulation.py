@@ -23,6 +23,8 @@ PURPLE=(128, 0, 128)
 NAVY=(0, 0, 128)
 TEAL=(0, 128, 128)
 
+clock=pygame.time.Clock()
+
 K=9
 M=3
 k=1
@@ -56,6 +58,7 @@ while True:
         if k==9: k=1
         
         DISPLAYSURF.fill(WHITE)
+        clock.tick(1)
         l=nran(k, K)
         temp=C[l-1]
         C[l-1]=C[k-1]
