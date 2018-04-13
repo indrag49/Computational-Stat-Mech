@@ -13,6 +13,6 @@ def nran(k, l):
 def Nbr(n, k): return A.T[n-1, k-1]
 
 def markov_discrete_pebble(k):
-        n=random.choice(range(1, 5))
+        n=nran(1, 4)
         if Nbr(n, k)!=0: k=Nbr(n, k)
         return k
