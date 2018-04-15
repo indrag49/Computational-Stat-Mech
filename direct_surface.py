@@ -9,7 +9,7 @@ def gauss(sigma):
         y=r*m.sin(phi)
         return [x, y]
 
-def direct_surface(d, sigma):
+def direct_surface(d):
         """ d is the dimension of the sphere, sigma is the standard deviation of the gaussian"""
         sigma=1./m.sqrt(d)
         S=0
@@ -24,14 +24,14 @@ X=[]
 Y=[]
 Z=[]
 for i in range(5000):
-        l=direct_surface(3, 0.5)
+        l=direct_surface(3)
         X+=[l[0], ]
         Y+=[l[1], ]
         Z+=[l[2], ]
 fig=plt.figure()
 ax=plt.axes(projection='3d')
 ax.scatter3D(X, Y, Z, c=X, cmap="prism_r", s=10)
-ax.set_title("direct_surface.png (d=3, $\sigma$=0.5)")
+ax.set_title("direct_surface.png (d=3)")
 ax.set_xlabel("X")
 ax.set_xlim(-1, 1)
 ax.set_ylim(-1, 1)
