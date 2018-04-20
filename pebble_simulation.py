@@ -64,12 +64,9 @@ def drawBox(boxx, boxy):
     left, top=getLeftTopOf(boxx, boxy)
     pygame.draw.rect(DISPLAYSURF, board_color, (left, top, boxsize, boxsize))
 
-def drawBoard(board, message):
+def drawBoard(board):
     DISPLAYSURF.fill(background)
-    if message:
-        textSurf, textRect = makeText(message, textcolor, background, 5, 5)
-        DISPLAYSURF.blit(textSurf, textRect)
-
+    
     for boxx in range(len(board)):
         for boxy in range(len(board[0])):
             drawBox(boxx, boxy)
@@ -79,7 +76,7 @@ def drawBoard(board, message):
     height=boardheight*boxsize
     pygame.draw.rect(DISPLAYSURF, border, (left - 5, top - 5, width + 30, height + 30), 5)
 
-drawBoard(getBoard(), '')
+drawBoard(getBoard())
 left, top=getLeftTopOf(0, 0)
 pygame.draw.circle(DISPLAYSURF, circle_color, (left + boxsize/2, top + boxsize/2), 30)
 k=7
@@ -95,7 +92,7 @@ while True:
                         pygame.quit()
                         sys.exit()
         clock.tick(2)
-        drawBoard(getBoard(), '')
+        drawBoard(getBoard())
         textsurface=myfont.render('Throws = '+str(throws), False, black)
         DISPLAYSURF.blit(textsurface, (440, 150))
         
