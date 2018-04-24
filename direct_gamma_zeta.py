@@ -1,3 +1,5 @@
+import random
+
 def direct_gamma_zeta(gamma, zeta, N):
         S=0
         s=0
