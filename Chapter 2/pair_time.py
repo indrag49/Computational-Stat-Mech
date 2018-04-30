@@ -13,7 +13,7 @@ def pair_time(pos_k, pos_l, vel_k, vel_l, radius):
         vel_y=vel_l[1]-vel_k[1]
         Delta_vel=np.array([vel_x, vel_y])
 
-        Upsilon=(Delta_pos.dot(Delta_vel))**2-(Delta_vel.dot(Delta_vel))*((Delta_pos.dot(Delta_pos))-4*radius**2)
+        Upsilon=(Delta_pos.dot(Delta_vel))**2-(Delta_vel.dot(Delta_vel))*((Delta_pos.dot(Delta_pos))-4.0*radius**2)
 
         if Upsilon>0.0 and Delta_pos.dot(Delta_vel)<0.0: return t_0-(Delta_pos.dot(Delta_vel)+m.sqrt(Upsilon))/(Delta_vel.dot(Delta_vel))
         else: return float(oo)
