@@ -1,5 +1,4 @@
 from sympy import oo
-import numpy as np
 import math as m
 import pygame, random, sys
 from pygame.locals import *
