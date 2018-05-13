@@ -50,7 +50,7 @@ myfont=pygame.font.SysFont('Comic Sans MS', 30)
 while True:
         for event in pygame.event.get():
                 if event.type==QUIT:
-                        pygame.image.save(DISPLAYSURF, 'Random Permutation.png')
+                        pygame.image.save(DISPLAYSURF, 'Event-Box.png')
                         pygame.quit()
                         sys.exit()
 
