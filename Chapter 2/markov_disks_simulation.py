@@ -28,12 +28,11 @@ delta=0.1
 while True:
         for event in pygame.event.get():
                 if event.type==QUIT:
-                        pygame.image.save(DISPLAYSURF, 'Random Permutation.png')
                         pygame.quit()
                         sys.exit()
 
         DISPLAYSURF.fill(white)
-        textsurface=myfont.render('Step = '+str(t), False, black)
+        textsurface=myfont.render('time = '+str(t), False, black)
         DISPLAYSURF.blit(textsurface, (120, 10))
 
         a=random.choice(pos)
@@ -46,7 +45,7 @@ while True:
         pygame.draw.circle(DISPLAYSURF, blue, (int(pos[1][0]*400), int(pos[1][1]*400)), int(radius*400), 0)
         pygame.draw.circle(DISPLAYSURF, yellow, (int(pos[2][0]*400), int(pos[2][1]*400)), int(radius*400), 0)
         pygame.draw.circle(DISPLAYSURF, green, (int(pos[3][0]*400), int(pos[3][1]*400)), int(radius*400), 0)
-        t+=1
+        t+=delta
         
         clock.tick(1000)
         
