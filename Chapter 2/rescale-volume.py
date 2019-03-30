@@ -5,7 +5,7 @@ def dist(k, l, Lx, Ly):
         delta_x=min(dx, Lx-dx)
         dy=abs(k[1]-l[1])%Ly
         delta_y=min(dy, Ly-dy)
-        return m.sqrt(delta_x**2+delta_y**2)
+        return math.sqrt(delta_x**2+delta_y**2)
 
 def gamma_cut(N, x_cut):
     x_star=1-N/x_cut
@@ -32,4 +32,3 @@ def rescale_volume(Lx, Ly, X, Beta, P, sigma):
     for i in range(N):
         Xnew+=[Upsilon*X[i], ]
     return [Upsilon*Lx, Upsilon*Ly, Xnew]
-    
