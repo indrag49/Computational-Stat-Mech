@@ -9,7 +9,7 @@ def nran(k, l):
 
                 
 DISPLAYSURF=pygame.display.set_mode((1000, 500))
-pygame.display.set_caption("Double Pendulum problem")
+pygame.display.set_caption("Random Permutation")
 
 WHITE=(255, 255, 255)
 RED=(255, 0, 0)
