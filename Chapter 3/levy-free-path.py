@@ -27,7 +27,7 @@ N=len(X)-1
 Y=[k*Beta/N for k in range(N+1)]
 
 DISPLAYSURF=pygame.display.set_mode((500, 500))
-pygame.display.set_caption("Random Permutation")
+pygame.display.set_caption("Levy-free-path")
 
 RED=(255, 0, 0)
 BLUE=(0, 0, 255)
@@ -42,7 +42,7 @@ for i in range(len(Y)-1):pygame.draw.line(DISPLAYSURF, BLUE, [165+int(X[i]*30), 
 while True:
         for event in pygame.event.get():
                 if event.type==QUIT:
-                        pygame.image.save(DISPLAYSURF, 'Naive-path-sampling.png')
+                        pygame.image.save(DISPLAYSURF, 'Levy-free-path.png')
                         pygame.quit()
                         sys.exit()
 
