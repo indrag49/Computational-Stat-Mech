@@ -1,4 +1,4 @@
-import pygame, random, sys, pylab
+import pygame, random, sys, pylab, math
 from pygame.locals import *
 import numpy as np
 
