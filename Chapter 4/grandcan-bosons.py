@@ -13,7 +13,7 @@ def grandcan_bosons(n_mean, mu_min, Beta):
     mu=(mu_min+mu_max)/2.
     return mu
 
-## To produce Table 4.5
+## To produce Table 4.5 in the book
 nmean=[400, 800, 1000, 1200, 1400, 2000, 5000, 10000]
 for i in nmean:
     print([i, grandcan_bosons(i, -12., 0.1)])
