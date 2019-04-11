@@ -16,9 +16,6 @@ def tower_sample(Pi):
         K=len(Pi)
         for l in range(1, K+1): L+=[L[l-1]+Pi[l-1], ]
         Upsilon=random.uniform(0, L[-1])
-        
-        print L
-        print Upsilon
 
         return bisection_search(Upsilon, L)
 
