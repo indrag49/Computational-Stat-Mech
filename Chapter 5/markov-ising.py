@@ -14,7 +14,6 @@ def nran(k, l):
 
 L=3
 N=L**2
-
 sigma=[random.choice([1, -1]) for i in range(N)]
 print("sigma=", sigma)
 print(" ")
