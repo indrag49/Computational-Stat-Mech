@@ -6,13 +6,13 @@ from pygame.locals import *
 pygame.font.init()
 
 white=(255, 255, 255)
-red=(255, 0, 0)
 black=(0, 0, 0)
 
 xmin, xmax, ymin, ymax=0, 1, 0, 1
 radius=0.04
 
 pos=[[random.uniform(radius, 1.-radius), random.uniform(radius, 1.-radius)]]
+col=[(random.randint(0, 255), random.randint(0, 255), random.randint(0, 255))]
 N=len(pos)
 t=1
                 
@@ -31,7 +31,7 @@ while True:
                 sys.exit()
 
     DISPLAYSURF.fill(white)
-    textsurface=myfont.render('Steps = '+str(t), False, black)
+    textsurface=myfont.render('No. of particles = '+str(N), False, black)
     DISPLAYSURF.blit(textsurface, (120, 10))
 
     flag=0
@@ -40,7 +40,8 @@ while True:
         for l in range(N):
             if min([math.sqrt((p[0]-P[0])**2+(p[1]-P[1])**2) for P in pos])>=2*radius:
                 pos+=[p, ]
-                for i in pos: pygame.draw.circle(DISPLAYSURF, (random.randint(0, 256), random.randint(0, 256), random.randint(0, 256)), (int(i[0]*500), int(i[1]*500)), int(radius*500), 0)
+                col+=[(random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)), ]
+                for i in range(len(pos)): pygame.draw.circle(DISPLAYSURF, col[i], (int(pos[i][0]*500), int(pos[i][1]*500)), int(radius*500), 0)
                 print(p, t)
                 flag=1
                 break
@@ -51,4 +52,3 @@ while True:
 
     clock.tick(10)
     pygame.display.update()
-    
