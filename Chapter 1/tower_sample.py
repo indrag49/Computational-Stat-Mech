@@ -1,6 +1,4 @@
 import random
-import numpy as np
-
 def tower_sample(Pi):
         L=[0]
         K=len(Pi)
