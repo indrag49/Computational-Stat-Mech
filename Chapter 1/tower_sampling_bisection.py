@@ -1,5 +1,4 @@
 import random
-import numpy as np
 
 def bisection_search(Upsilon, L):
         k_min=0
@@ -18,5 +17,3 @@ def tower_sample(Pi):
         Upsilon=random.uniform(0, L[-1])
 
         return bisection_search(Upsilon, L)
-
-
