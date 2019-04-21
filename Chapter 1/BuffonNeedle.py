@@ -1,5 +1,3 @@
-#Buffon's needle
-
 import pylab
 import random
 import math as m
