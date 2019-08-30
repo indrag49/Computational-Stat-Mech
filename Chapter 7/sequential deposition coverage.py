@@ -61,3 +61,4 @@ for radius in R:
     print(radius, N*math.pi*radius**2)
     Results+=[[radius, N*math.pi*radius**2], ]
     
+# Results = [[0.04, 0.5127079210658543], [0.06, 0.49762827632862316], [0.08, 0.4423362456254428]]
