@@ -1,0 +1,19 @@
+\begin{thebibliography}{1}
+
+\bibitem{zhang2013precise}
+G~Zhang and Salvatore Torquato.
+\newblock Precise algorithm to generate random sequential addition of hard
+  hyperspheres at saturation.
+\newblock {\em Physical Review E}, 88(5):053312, 2013.
+
+\bibitem{krauth2006statistical}
+Werner Krauth.
+\newblock {\em Statistical mechanics: algorithms and computations}, volume~13.
+\newblock OUP Oxford, 2006.
+
+\bibitem{sweigart2012making}
+Albert Sweigart.
+\newblock {\em Making Games with Python \& Pygame}.
+\newblock CreateSpace North Charleston, 2012.
+
+\end{thebibliography}
